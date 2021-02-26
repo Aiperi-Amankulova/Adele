@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Adele</string>
+
+    //on boarding
+    <string name="next">Skip</string>
+    <string name="proceed">Proceed</string>
 </resources>
