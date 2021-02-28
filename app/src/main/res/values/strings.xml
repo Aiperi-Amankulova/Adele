@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Adele</string>
 
-    //on boarding
+    //On boarding
     <string name="next">Skip</string>
     <string name="proceed">Proceed</string>
+    
+    //Registration
+    <string name="authenticate">Authenticate</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="nik">Nickname</string>
+    <string name="password">Password</string>
+
 </resources>
