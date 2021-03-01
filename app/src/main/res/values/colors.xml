@@ -10,4 +10,5 @@
 
 
     <color name="color_splash">#efcead</color>
+    <color name="color_registration_btn">#C08E65</color>
 </resources>
