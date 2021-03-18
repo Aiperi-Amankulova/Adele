@@ -15,7 +15,7 @@
             <layer-list>
                 <item>
                     <shape android:innerRadius="0dp" android:shape="ring" android:thickness="6dp" android:useLevel="false">
-                        <solid android:color="@color/tab1" />
+
                     </shape>
                 </item>
             </layer-list>
