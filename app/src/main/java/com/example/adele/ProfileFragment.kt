@@ -1,4 +1,8 @@
 package com.example.adele
 
-class ProfileFragment {
+import com.example.adele.data.common.BaseFragment
+
+class ProfileFragment: BaseFragment() {
+
+    override fun resID() = R.layout.fragment_profile
 }

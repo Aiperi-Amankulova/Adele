@@ -24,8 +24,7 @@
 
     //Profile page
     <string name="profile">Profile</string>
-
-
+    <string name="color">Color:</string>
 
 
 </resources>
