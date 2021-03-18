@@ -67,6 +67,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="30sp"
+        android:textColor="@color/white"
         android:background="@drawable/btn_background"
         android:fontFamily="@font/cinzel_regular"
         android:text="@string/sign_in"
