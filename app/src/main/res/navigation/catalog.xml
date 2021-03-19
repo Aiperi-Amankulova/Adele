@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/catalog">
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="com.example.adele.CatalogFragment"
+        android:name="com.example.adele.ui.bottom_nav.catalog.CatalogFragment"
         android:label="CatalogFragment" />
 </navigation>

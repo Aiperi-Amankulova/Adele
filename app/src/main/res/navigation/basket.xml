@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/basket">
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.example.adele.BasketFragment"
+        android:name="com.example.adele.ui.bottom_nav.basket.BasketFragment"
         android:label="BasketFragment" />
 </navigation>
