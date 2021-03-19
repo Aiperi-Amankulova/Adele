@@ -1,5 +1,6 @@
-package com.example.adele
+package com.example.adele.ui.bottom_nav.profile
 
+import com.example.adele.R
 import com.example.adele.data.common.BaseFragment
 
 class ProfileFragment: BaseFragment() {
