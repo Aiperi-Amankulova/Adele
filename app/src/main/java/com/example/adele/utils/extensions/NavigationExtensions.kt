@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.adele
+package com.example.adele.utils.extensions
 
 import android.content.Intent
 import android.util.SparseArray
