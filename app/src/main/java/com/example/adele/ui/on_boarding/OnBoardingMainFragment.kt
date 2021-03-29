@@ -9,9 +9,8 @@ import com.example.adele.PreferenceHelper
 import com.example.adele.R
 import com.example.adele.data.model.OnBoardModel
 import kotlinx.android.synthetic.main.activity_on_boarding.*
-import kotlinx.android.synthetic.main.page_on_boarding.*
 
-class OnBoardingMainFragment  : Fragment(R.layout.page_on_boarding) {
+class OnBoardingMainFragment : Fragment(R.layout.activity_on_boarding) {
 
     private val list = arrayListOf<Fragment>()
 
@@ -34,25 +33,23 @@ class OnBoardingMainFragment  : Fragment(R.layout.page_on_boarding) {
 
             override fun onPageSelected(position: Int) {
                 if (isLastPage(position)) {
-                    tvNext.text = getString(R.string.next)
-                } else {
                     tvNext.text = getString(R.string.proceed)
+                } else {
+                    tvNext.text = getString(R.string.next)
                 }
             }
+
         })
 
         tvNext.setOnClickListener {
             if (isLastPage(onBoardViewPager.currentItem)) {
                 PreferenceHelper.setIsFirstLaunch()
-                findNavController().navigate(R.id.action_onBoardMainFragment_to_mainActivity)
-            } else {
+                findNavController().navigate(R.id.action_splashScreen2_to_onHomeFragment)
+            }
+            else {
                 onBoardViewPager.currentItem += 1
             }
         }
-        btn_go.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardMainFragment_to_mainActivity)
-        }
-
     }
 
     private fun setupViewPager() {

@@ -23,7 +23,7 @@ class SplashFragment : BaseFragment() {
 
     private fun selectFragment() {
         if (PreferenceHelper.getIsFirstLaunch()) {
-            findNavController().navigate(R.id.action_splashScreen2_to_onBoardMainFragment)
+            findNavController().navigate(R.id.action_splashScreen2_to_onHomeFragment)
         } else {
             val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)

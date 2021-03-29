@@ -25,6 +25,7 @@
     //Profile page
     <string name="profile">Profile</string>
     <string name="color">Color:</string>
+    <string name="see_more">see more</string>
 
 
 </resources>
