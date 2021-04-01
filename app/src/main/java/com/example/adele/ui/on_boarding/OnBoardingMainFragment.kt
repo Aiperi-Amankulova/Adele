@@ -44,7 +44,7 @@ class OnBoardingMainFragment : Fragment(R.layout.activity_on_boarding) {
         tvNext.setOnClickListener {
             if (isLastPage(onBoardViewPager.currentItem)) {
                 PreferenceHelper.setIsFirstLaunch()
-                findNavController().navigate(R.id.action_splashScreen2_to_onHomeFragment)
+                findNavController().navigate(R.id.splashScreenForOnBoard)
             }
             else {
                 onBoardViewPager.currentItem += 1

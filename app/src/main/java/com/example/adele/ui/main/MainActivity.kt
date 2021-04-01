@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.adele.R
 import com.example.adele.utils.extensions.setupWithNavController
+import com.example.adele.utils.extensions.showLightStatusBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupBottomView()
+        showLightStatusBar()
     }
 
     private fun setupBottomView() {
@@ -31,4 +33,4 @@ class MainActivity : AppCompatActivity() {
                 intent = intent
         )
     }
-    }
+}
