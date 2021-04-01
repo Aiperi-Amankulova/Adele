@@ -10,7 +10,7 @@ import com.example.adele.data.model.HomeModel
 import com.example.adele.utils.diffUtils.DiffUtils
 import kotlinx.android.synthetic.main.item_basket.view.*
 
-class BasketAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, FavoriteViewHolder>(DiffUtils.diffUtilItems) {
+class BasketAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, FavoriteViewHolder>(DiffUtils.diffUtils) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_basket, parent, false)

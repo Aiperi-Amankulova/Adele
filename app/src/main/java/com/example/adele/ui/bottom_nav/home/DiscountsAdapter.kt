@@ -10,18 +10,18 @@ import com.example.adele.data.model.HomeModel
 import com.example.adele.utils.diffUtils.DiffUtils
 import kotlinx.android.synthetic.main.item_new_shops.view.*
 
-class DiscountsAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, HotSalesViewHolder>(DiffUtils.diffUtils) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotSalesViewHolder {
+class DiscountsAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, DiscountsViewHolder>(DiffUtils.diffUtils) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiscountsViewHolder {
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_new_shops, parent, false)
-        return HotSalesViewHolder(view)
+        return DiscountsViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: HotSalesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DiscountsViewHolder, position: Int) {
         holder.bind(getItem(position), listener)
     }
 }
-class HotSalesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class DiscountsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: HomeModel, listener: () -> Unit) {
         itemView.imageView.setImageResource(item.image)
 

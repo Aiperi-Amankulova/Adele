@@ -8,59 +8,59 @@ import com.example.adele.data.model.HomeModel
 class HomeViewModel : ViewModel() {
 
     val data = MutableLiveData<List<HomeModel>>()
-    val dataSales = MutableLiveData<List<HomeModel>>()
-    val dataBest = MutableLiveData<List<HomeModel>>()
+    val dataNews = MutableLiveData<List<HomeModel>>()
+    val dataDiscounts = MutableLiveData<List<HomeModel>>()
 
     init {
-        generateData()
-        generateBestData()
+        newData()
+        discountsBestData()
     }
-    private fun generateBestData(){
+    private fun discountsBestData(){
         val list2 = arrayListOf<HomeModel>()
 
         list2.add(
                 HomeModel(
-                        image = R.drawable.t_thirds, title = "Samsung Galaxy s20 Ultra"
+                        image = R.drawable.t_thirds, title = "nv hdfv"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "Xiaomi Mi 10 Pro"
+                        image = R.drawable.top_jins, title = "jvb shdfvb dk"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.skeert, title = "Samsung Note 20 Ultra"
+                        image = R.drawable.skeert, title = " mdfvljndf"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "Motorola One Edge"
+                        image = R.drawable.top, title = "vfdv"
                 )
         )
-        dataBest.postValue(list2)
+        dataDiscounts.postValue(list2)
     }
 
-    private fun generateData(){
+    private fun newData(){
         val list1 = arrayListOf<HomeModel>()
 
         list1.add(
                 HomeModel(
-                        image = R.drawable.first_list, title = "Iphone 12"
+                        image = R.drawable.first_list, title = "fdvfsev"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.second_list, title = "Iphone 12"
+                        image = R.drawable.second_list, title = "vfwvfwsv"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.third_list, title = "Iphone 12"
+                        image = R.drawable.third_list, title = "evwsfv"
                 )
         )
 
-        dataSales.postValue(list1)
+        dataNews.postValue(list1)
 
     }
 

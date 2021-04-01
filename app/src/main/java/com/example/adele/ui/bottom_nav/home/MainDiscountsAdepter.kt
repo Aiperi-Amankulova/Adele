@@ -10,7 +10,8 @@ import com.example.adele.data.model.HomeModel
 import com.example.adele.utils.diffUtils.DiffUtils
 import kotlinx.android.synthetic.main.item_recucler_home.view.*
 
-class MainDiscountsAdepter(private val listener: () -> Unit) : ListAdapter<HomeModel, ProductCategoryViewHolder>(DiffUtils.diffUtils) {
+class MainDiscountsAdepter(private val listener: () -> Unit) : ListAdapter<HomeModel,
+        ProductCategoryViewHolder>(DiffUtils.diffUtils) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCategoryViewHolder {
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_recucler_home, parent, false)
@@ -24,9 +25,8 @@ class MainDiscountsAdepter(private val listener: () -> Unit) : ListAdapter<HomeM
 
 class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: HomeModel, listener: () -> Unit) {
-        itemView.tv_title.text = item.title
         itemView.img_pr.setImageResource(item.image)
-
+        itemView.tv_title.text = item.title
         itemView.recycler_card.setOnClickListener {
             listener.invoke()
         }

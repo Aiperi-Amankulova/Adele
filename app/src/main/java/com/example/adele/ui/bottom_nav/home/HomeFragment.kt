@@ -26,7 +26,7 @@ class HomeFragment : BaseFragment() {
             navigateToProductCategory()
         }
     }
-    private val productCategoryAdapter by lazy {
+    private val clothesCategoryAdapter by lazy {
         MainDiscountsAdepter() {
             navigateToProductCategory()
         }
@@ -46,18 +46,18 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupViewModel() {
-        vm.dataSales.observe(viewLifecycleOwner, Observer {
+        vm.dataNews.observe(viewLifecycleOwner, Observer {
             hotSalesAdapter.submitList(it)
         })
 
-        vm.dataBest.observe(viewLifecycleOwner, Observer {
-            productCategoryAdapter.submitList(it)
+        vm.dataDiscounts.observe(viewLifecycleOwner, Observer {
+            clothesCategoryAdapter.submitList(it)
         })
     }
 
     private fun setupRecyclerView() {
         binding.recyclerView.adapter = hotSalesAdapter
-        binding.recycler.adapter = productCategoryAdapter
+        binding.recycler.adapter = clothesCategoryAdapter
         binding.recycler.layoutManager = GridLayoutManager(context, 2)
 
 

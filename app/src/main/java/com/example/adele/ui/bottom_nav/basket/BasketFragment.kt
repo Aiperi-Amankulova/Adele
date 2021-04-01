@@ -12,7 +12,7 @@ import com.example.adele.utils.extensions.viewBinding
 class BasketFragment : BaseFragment() {
 
     override fun resID() = R.layout.fragment_basket
-    val binding by viewBinding(FragmentBasketBinding::bind)
+    private val binding by viewBinding(FragmentBasketBinding::bind)
     private val favoriteAdapter by lazy {
         BasketAdapter() {
 
