@@ -35,9 +35,9 @@ class ProductFragment : BaseFragment() {
     }
 
     private fun setupRecyclerView() {
-        binding.recyclerViewProductCategory.adapter = productCategoryAdapter
+        binding.recyclerViewProductDis.adapter = productCategoryAdapter
         productCategoryAdapter.submitList(generateBestData())
-        binding.recyclerViewProductCategory.layoutManager = GridLayoutManager(context, 2)
+        binding.recyclerViewProductDis.layoutManager = GridLayoutManager(context, 2)
     }
 
     private fun navigateToProductDetails() {

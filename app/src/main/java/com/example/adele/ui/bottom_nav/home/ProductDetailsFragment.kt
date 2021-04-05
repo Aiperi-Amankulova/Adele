@@ -42,14 +42,6 @@ class ProductDetailsFragment : BaseFragment() {
 
         binding.recyclerPro.adapter = relatedProductAdapter
         relatedProductAdapter.submitList(generateBestData())
-        binding.recyclerPro.addItemDecoration(
-                ItemOffsetDecoration(
-                        firstItemLeftMargin = 20f,
-                        lastItemRightMargin = 20f,
-                        itemBottomMargin = 54f,
-                        isNeedBottomMargin = true
-                )
-        )
     }
 
     private fun navigateToDescription() {

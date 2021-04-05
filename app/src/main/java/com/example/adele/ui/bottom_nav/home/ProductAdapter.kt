@@ -8,13 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.adele.R
 import com.example.adele.data.model.HomeModel
 import com.example.adele.utils.diffUtils.DiffUtils
-import com.example.adele.utils.extensions.strikeThroughSpan
-import kotlinx.android.synthetic.main.item_recucler_home.view.*
+import kotlinx.android.synthetic.main.item_new_shops.view.*
 
 class ProductAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, ProductCategoryViewHolder>(DiffUtils.diffUtils) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCategoryViewHolder {
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_recucler_home, parent, false)
+                .inflate(R.layout.item_new_shops, parent, false)
         return ProductCategoryViewHolder(view)
     }
 
@@ -25,11 +24,10 @@ class ProductAdapter(private val listener: () -> Unit) : ListAdapter<HomeModel, 
 
 class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: HomeModel, listener: () -> Unit) {
-        itemView.tv_title.text = item.title
-        itemView.tv_price.text = "$1500".strikeThroughSpan()
-        itemView.img_pr.setImageResource(item.image)
+        itemView.tv_title_for_new.text = item.title
+        itemView.imageView.setImageResource(item.image)
 
-        itemView.recycler_card.setOnClickListener {
+        itemView.main_card.setOnClickListener {
             listener.invoke()
         }
     }

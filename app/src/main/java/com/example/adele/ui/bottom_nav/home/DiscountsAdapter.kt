@@ -29,7 +29,6 @@ class DiscountsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.tv_title.text = item.title
         itemView.tv_price.text = "$52"
         itemView.img_pr.setImageResource(item.image)
-
         itemView.recycler_card.setOnClickListener {
             listener.invoke()
         }

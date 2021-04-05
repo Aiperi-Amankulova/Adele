@@ -11,7 +11,6 @@ import com.example.adele.R
 import com.example.adele.data.common.BaseFragment
 import com.example.adele.databinding.FragmentHomeBinding
 import com.example.adele.utils.GravitySnapHelper
-import com.example.adele.utils.ItemOffsetDecoration
 import com.example.adele.utils.extensions.viewBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -63,27 +62,8 @@ class HomeFragment : BaseFragment() {
         binding.recycler.adapter = destinationAdapter
         binding.recycler.layoutManager = GridLayoutManager(context, 2)
 
-
         val helper: SnapHelper = GravitySnapHelper(Gravity.START)
         helper.attachToRecyclerView(binding.recyclerView)
-
-        binding.recyclerView.addItemDecoration(
-                ItemOffsetDecoration(
-                        itemLeftMargin = 10f,
-                        itemRightMargin = 10f,
-                        firstItemLeftMargin = 20f,
-                        lastItemRightMargin = 20f
-                )
-        )
-
-        binding.recycler.addItemDecoration(
-                ItemOffsetDecoration(
-                        itemLeftMargin = 12f,
-                        itemRightMargin = 12f,
-                        firstItemLeftMargin = 28f,
-                        lastItemRightMargin = 28f
-                )
-        )
     }
 
     private fun navigateToProductCategory() {
