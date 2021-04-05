@@ -21,17 +21,26 @@ class HomeFragment : BaseFragment() {
     private val vm by sharedViewModel<HomeViewModel>()
     private val binding by viewBinding(FragmentHomeBinding::bind)
 
-    private val hotSalesAdapter by lazy {
-        DiscountsAdapter() {
-            navigateToProductCategory()
+    private val newProductAdapter by lazy {
+        ProductAdapter() {
+            navigateToProductDetails()
         }
     }
-    private val clothesCategoryAdapter by lazy {
-        MainDiscountsAdepter() {
-            navigateToProductCategory()
+    private val destinationAdapter by lazy {
+        DiscountsAdapter() {
+            navigateToProductDetails()
         }
     }
 
+    private fun setupListeners() {
+        binding.tv.setOnClickListener {
+            navigateToProductCategory()
+        }
+
+        binding.tv.setOnClickListener {
+            navigateToProductCategory()
+        }
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
@@ -39,25 +48,19 @@ class HomeFragment : BaseFragment() {
         setupListeners()
     }
 
-    private fun setupListeners() {
-        binding.tv.setOnClickListener {
-            navigateToProductCategory()
-        }
-    }
-
     private fun setupViewModel() {
         vm.dataNews.observe(viewLifecycleOwner, Observer {
-            hotSalesAdapter.submitList(it)
+            newProductAdapter.submitList(it)
         })
 
         vm.dataDiscounts.observe(viewLifecycleOwner, Observer {
-            clothesCategoryAdapter.submitList(it)
+            destinationAdapter.submitList(it)
         })
     }
 
     private fun setupRecyclerView() {
-        binding.recyclerView.adapter = hotSalesAdapter
-        binding.recycler.adapter = clothesCategoryAdapter
+        binding.recyclerView.adapter = newProductAdapter
+        binding.recycler.adapter = destinationAdapter
         binding.recycler.layoutManager = GridLayoutManager(context, 2)
 
 
@@ -81,11 +84,16 @@ class HomeFragment : BaseFragment() {
                         lastItemRightMargin = 28f
                 )
         )
-
     }
 
     private fun navigateToProductCategory() {
-        val destination = FragmentDirections.actionMainFragmentToProductCategoryFragment()
+        val destination =  FragmentDirections.actionMainFragmentToProductCategoryFragment()
+        findNavController().navigate(destination)
+    }
+
+    private fun navigateToProductDetails() {
+        val destination =  FragmentDirections.actionMainFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
     }
 }
+

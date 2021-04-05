@@ -11,14 +11,14 @@ import kotlinx.android.synthetic.main.activity_registration.*
 class SignInFragment  : BaseFragment() {
 
     override fun resID() = R.layout.activity_authenticate_in
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setupListeners()
-    }
-
-    private fun setupListeners() {
-        btn_sign_in_for.setOnClickListener {
-            findNavController().navigate(R.id.action_registration_to_main)
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        setupListeners()
+//    }
+//
+//    private fun setupListeners() {
+//        btn_sign_in_for.setOnClickListener {
+//            findNavController().navigate(R.id.action_registration_to_home)
+//        }
+//    }
 }

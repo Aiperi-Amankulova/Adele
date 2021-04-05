@@ -11,18 +11,18 @@ class RegistrationFragment  : BaseFragment() {
 
     override fun resID() = R.layout.activity_registration
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setupListeners()
-    }
-
-    private fun setupListeners() {
-        btn_sign_in.setOnClickListener {
-            findNavController().navigate(R.id.action_onboarding_to_registration)
-        }
-
-        btn_sign_up.setOnClickListener {
-            findNavController().navigate(R.id.action_registration_to_main)
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        setupListeners()
+//    }
+//
+//    private fun setupListeners() {
+//        btn_sign_in.setOnClickListener {
+//            findNavController().navigate(R.id.action_registration_to_sign_in)
+//        }
+//
+//        btn_sign_up.setOnClickListener {
+//            findNavController().navigate(R.id.action_registration_to_sign_in)
+//        }
+//    }
 }

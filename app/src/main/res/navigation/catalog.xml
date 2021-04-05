@@ -4,5 +4,32 @@
     <fragment
         android:id="@+id/catalogFragment"
         android:name="com.example.adele.ui.bottom_nav.catalog.CatalogFragment"
-        android:label="CatalogFragment" />
+        android:label="CatalogFragment" >
+        <action
+            android:id="@+id/catalog"
+            app:destination="@+id/productCategoryFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/productCategoryFragment"
+        android:name="com.example.adele.ui.bottom_nav.home.ProductFragment"
+        android:label="ProductCategoryFragment" >
+        <action
+            android:id="@+id/action_product_fragmen_to_productdet_fragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.adele.ui.bottom_nav.home.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" >
+        <action
+        android:id="@+id/action_product_fragment_to_description"
+       />
+        <action
+            android:id="@+id/action_product_fragment_to_product_details_fragment"
+            />
+
+        <action
+            android:id="@+id/action_product_details_fragment_to_sp_fragment"
+             />
+    </fragment>
 </navigation>

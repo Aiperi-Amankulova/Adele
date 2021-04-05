@@ -6,7 +6,10 @@ import com.example.adele.R
 
 class FragmentDirections private constructor() {
     companion object {
+        fun actionMainFragmentToProductDetailsFragment(): NavDirections =
+                ActionOnlyNavDirections(R.id.action_mainFragment_to_productDetailsFragment)
+
         fun actionMainFragmentToProductCategoryFragment(): NavDirections =
-                ActionOnlyNavDirections(R.id.action_splashScreen2_to_onHomeFragment)
-    }
-}
+                ActionOnlyNavDirections(R.id.action_mainFragment_to_productCategoryFragment)
+    }}
+
