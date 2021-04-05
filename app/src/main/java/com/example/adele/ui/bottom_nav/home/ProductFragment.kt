@@ -8,8 +8,6 @@ import com.example.adele.R
 import com.example.adele.data.common.BaseFragment
 import com.example.adele.data.model.HomeModel
 import com.example.adele.databinding.FragmentCategoriesSeeBinding
-import com.example.adele.databinding.FragmentProfileBinding
-import com.example.adele.ui.main.ProductFragmentDirections
 import com.example.adele.utils.extensions.viewBinding
 
 class ProductFragment : BaseFragment() {
@@ -41,7 +39,7 @@ class ProductFragment : BaseFragment() {
     }
 
     private fun navigateToProductDetails() {
-        val destination = ProductFragmentDirections.actionProductFragmentToProductDetFragment()
+        val destination = ProductFragmentDirections.actionProductCategoryFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
     }
 
@@ -71,6 +69,66 @@ class ProductFragment : BaseFragment() {
         list.add(
                 HomeModel(
                         image = R.drawable.skeert, title = "fmdvldkzfv"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "dfvsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.t_thirds, title = "vfsfv"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "defsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "dfvsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.t_thirds, title = "vfsfv"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "defsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "dfvsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.t_thirds, title = "vfsfv"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "defsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "dfvsd"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.t_thirds, title = "vfsfv"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.grey, title = "defsd"
                 )
         )
         list.add(

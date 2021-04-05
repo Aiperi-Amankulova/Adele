@@ -9,8 +9,6 @@ import com.example.adele.data.model.HomeModel
 import com.example.adele.data.model.SpModel
 import com.example.adele.databinding.FragmentMoreBinding
 import com.example.adele.ui.PhotoAdapter
-import com.example.adele.ui.main.ProductDetailsFragmentDirections
-import com.example.adele.utils.ItemOffsetDecoration
 import com.example.adele.utils.extensions.viewBinding
 
 class ProductDetailsFragment : BaseFragment() {
@@ -44,20 +42,20 @@ class ProductDetailsFragment : BaseFragment() {
         relatedProductAdapter.submitList(generateBestData())
     }
 
-    private fun navigateToDescription() {
-        val destination =
-                ProductDetailsFragmentDirections.actionProductDetailsFragmentToDescriptionFragment()
-        findNavController().navigate(destination)
-    }
-
-    private fun navigateToDetails() {
-        val destination = ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpecificationFragment()
-        findNavController().navigate(destination)
-    }
+//    private fun navigateToDescription() {
+//        val destination =
+//                ProductDetailsFragmentDirections.actionProductDetailsFragmentToDescriptionFragment()
+//        findNavController().navigate(destination)
+//    }
+//
+//    private fun navigateToDetails() {
+//        val destination = ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpecificationFragment()
+//        findNavController().navigate(destination)
+//    }
 
     private fun navigateToRelatedProductDetails() {
         val destination =
-                ProductDetailsFragmentDirections.actionProductDetailsFragmentToRelatedProductDetailsFragment()
+                ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpFragment()
         findNavController().navigate(destination)
     }
 
@@ -100,6 +98,46 @@ class ProductDetailsFragment : BaseFragment() {
         list2.add(
                 HomeModel(
                         image = R.drawable.t_thirds, title = "Xiaomi Mi 10 Pro"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Motorola One Edge"
                 )
         )
         list2.add(

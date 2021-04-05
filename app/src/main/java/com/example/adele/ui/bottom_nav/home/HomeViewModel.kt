@@ -69,6 +69,36 @@ class HomeViewModel : ViewModel() {
                         image = R.drawable.first_list, title = "evwsfv"
                 )
         )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.first_list, title = "evwsfv"
+                )
+        )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.second_list, title = "evwsfv"
+                )
+        )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.first_list, title = "evwsfv"
+                )
+        )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.first_list, title = "evwsfv"
+                )
+        )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.second_list, title = "evwsfv"
+                )
+        )
+        list1.add(
+                HomeModel(
+                        image = R.drawable.first_list, title = "evwsfv"
+                )
+        )
         dataNews.postValue(list1)
     }
 }
