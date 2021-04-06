@@ -23,7 +23,6 @@ data class FeaturesModel(
             list.add(FeaturesModel("RAM", "128 GB"))
             list.add(FeaturesModel("Display technology", "Super AMOLED"))
             list.add(FeaturesModel("Front camera", "Front"))
-
             return list
         }
     }

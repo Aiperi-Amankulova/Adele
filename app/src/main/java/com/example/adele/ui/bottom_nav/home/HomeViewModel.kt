@@ -20,22 +20,47 @@ class HomeViewModel : ViewModel() {
 
         list2.add(
                 HomeModel(
-                        image = R.drawable.t_thirds, title = "nv hdfv"
+                        image = R.drawable.t_thirds, title = "T-Thirds"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "jvb shdfvb dk"
+                        image = R.drawable.top_jins, title = "Jeans top"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.skeert, title = " mdfvljndf"
+                        image = R.drawable.skeert, title = " Skirt"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "vfdv"
+                        image = R.drawable.top, title = "Top"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.t_thirds, title = "T-Thirds"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Jeans top"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.skeert, title = " Skirt"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top, title = "Top"
+                )
+        )
+        list2.add(
+                HomeModel(
+                        image = R.drawable.top_jins, title = "Top"
                 )
         )
         dataDiscounts.postValue(list2)
@@ -46,57 +71,27 @@ class HomeViewModel : ViewModel() {
 
         list1.add(
                 HomeModel(
-                        image = R.drawable.first_list, title = "fdvfsev"
+                        image = R.drawable.list1, title = "fdvfsev"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.second_list, title = "vfwvfwsv"
+                        image = R.drawable.list2, title = "vfwvfwsv"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
+                        image = R.drawable.list3, title = "evwsfv"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.second_list, title = "evwsfv"
+                        image = R.drawable.list4, title = "evwsfv"
                 )
         )
         list1.add(
                 HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.second_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.second_list, title = "evwsfv"
-                )
-        )
-        list1.add(
-                HomeModel(
-                        image = R.drawable.first_list, title = "evwsfv"
+                        image = R.drawable.list5, title = "evwsfv"
                 )
         )
         dataNews.postValue(list1)

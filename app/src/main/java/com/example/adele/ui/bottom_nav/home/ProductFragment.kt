@@ -39,7 +39,7 @@ class ProductFragment : BaseFragment() {
     }
 
     private fun navigateToProductDetails() {
-        val destination = ProductFragmentDirections.actionProductCategoryFragmentToProductDetailsFragment()
+        val destination = ProductCategoryFragmentDirections.actionProductCategoryFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
     }
 

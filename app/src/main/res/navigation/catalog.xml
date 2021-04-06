@@ -11,7 +11,7 @@
     </fragment>
     <fragment
         android:id="@+id/productCategoryFragment"
-        android:name="com.example.adele.ui.bottom_nav.home.ProductFragment"
+        android:name="com.example.adele.ui.bottom_nav.home.ProductDetailsFragment"
         android:label="ProductCategoryFragment" >
         <action
             android:id="@+id/action_product_fragmen_to_productdet_fragment"

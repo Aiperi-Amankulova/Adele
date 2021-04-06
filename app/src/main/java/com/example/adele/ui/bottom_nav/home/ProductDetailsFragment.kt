@@ -17,7 +17,7 @@ class ProductDetailsFragment : BaseFragment() {
 
     private val slideAdapter by lazy { PhotoAdapter() }
     private val relatedProductAdapter by lazy {
-        ProductAdapter() {
+        DetailsAdapter() {
             navigateToRelatedProductDetails()
         }
     }

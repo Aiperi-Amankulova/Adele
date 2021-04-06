@@ -26,7 +26,6 @@ class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: HomeModel, listener: () -> Unit) {
         itemView.tv_title_for_new.text = item.title
         itemView.imageView.setImageResource(item.image)
-
         itemView.main_card.setOnClickListener {
             listener.invoke()
         }

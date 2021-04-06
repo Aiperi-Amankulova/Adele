@@ -61,7 +61,6 @@ class HomeFragment : BaseFragment() {
         binding.recyclerView.adapter = newProductAdapter
         binding.recycler.adapter = destinationAdapter
         binding.recycler.layoutManager = GridLayoutManager(context, 3)
-
         val helper: SnapHelper = GravitySnapHelper(Gravity.START)
         helper.attachToRecyclerView(binding.recyclerView)
     }
