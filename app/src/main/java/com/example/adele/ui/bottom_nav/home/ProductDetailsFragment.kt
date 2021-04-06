@@ -42,17 +42,6 @@ class ProductDetailsFragment : BaseFragment() {
         relatedProductAdapter.submitList(generateBestData())
     }
 
-//    private fun navigateToDescription() {
-//        val destination =
-//                ProductDetailsFragmentDirections.actionProductDetailsFragmentToDescriptionFragment()
-//        findNavController().navigate(destination)
-//    }
-//
-//    private fun navigateToDetails() {
-//        val destination = ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpecificationFragment()
-//        findNavController().navigate(destination)
-//    }
-
     private fun navigateToRelatedProductDetails() {
         val destination =
                 ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpFragment()
