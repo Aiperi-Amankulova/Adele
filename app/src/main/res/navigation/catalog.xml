@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/catalog">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/catalog"
+    app:startDestination="@id/catalogFragment">
     <fragment
         android:id="@+id/catalogFragment"
         android:name="com.example.adele.ui.bottom_nav.catalog.CatalogFragment"

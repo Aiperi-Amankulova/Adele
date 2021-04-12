@@ -50,9 +50,9 @@ class ProductDetailsFragment : BaseFragment() {
 
     private fun getDataForPhotoPager(): ArrayList<Int> {
         val list = arrayListOf<Int>()
-        list.add(R.drawable.second_list)
-        list.add(R.drawable.first_list)
-        list.add(R.drawable.third_list)
+        list.add(R.drawable.list1)
+        list.add(R.drawable.list3)
+        list.add(R.drawable.list5)
 
         return list
     }
