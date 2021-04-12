@@ -81,63 +81,52 @@ class ProductDetailsFragment : BaseFragment() {
 
         list2.add(
                 HomeModel(
-                        image = R.drawable.grey, title = "Samsung Galaxy s20 Ultra"
+                        image = R.drawable.grey, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.t_thirds, title = "Xiaomi Mi 10 Pro"
+                        image = R.drawable.t_thirds, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                        image = R.drawable.top, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                        image = R.drawable.top_jins, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                        image = R.drawable.top, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                        image = R.drawable.top_jins, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                        image = R.drawable.top, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "Motorola One Edge"
+                        image = R.drawable.top, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
+                        image = R.drawable.top_jins, title = "fvdfvb"
                 )
         )
         list2.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "Motorola One Edge"
-                )
-        )
-        list2.add(
-                HomeModel(
-                        image = R.drawable.top, title = "Samsung Note 20 Ultra"
-                )
-        )
-        list2.add(
-                HomeModel(
-                        image = R.drawable.top_jins, title = "Motorola One Edge"
-                )
+                        image = R.drawable.top, title = "fvdfvb")
         )
         return list2
     }
