@@ -1,72 +1,124 @@
 package com.example.adele.ui.bottom_nav.catalog
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.SnapHelper
 import com.example.adele.R
 import com.example.adele.data.common.BaseFragment
 import com.example.adele.data.model.HomeModel
-import com.example.adele.databinding.FragmentBasketBinding
 import com.example.adele.databinding.FragmentCatalogBinding
-import com.example.adele.databinding.FragmentCategoriesSeeBinding
-import com.example.adele.databinding.FragmentNextPtoductBinding
-import com.example.adele.ui.MultipleAdapter
-import com.example.adele.ui.bottom_nav.PhotoAdapter
-import com.example.adele.ui.bottom_nav.basket.BasketAdapter
-import com.example.adele.ui.bottom_nav.home.ProductAdapter
-import com.example.adele.ui.bottom_nav.home.ProductCategoryFragmentDirections
-import com.example.adele.ui.bottom_nav.home.ProductFragmentDirections
-import com.example.adele.utils.GravitySnapHelper
+import com.example.adele.ui.bottom_nav.home.DiscountsAdapter
 import com.example.adele.utils.extensions.viewBinding
 
 class CatalogFragment : BaseFragment() {
 
     override fun resID() = R.layout.fragment_catalog
     private val binding by viewBinding(FragmentCatalogBinding::bind)
-    private val favoriteAdapter by lazy {
+
+    private val productCategoryAdapter by lazy {
         CatalogAdapter() {
+            navigateToProductDetails()
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun setupRecyclerView() {
-        binding.recyclerView.layoutManager = GridLayoutManager(context, 3)
-        val helper: SnapHelper = GravitySnapHelper(Gravity.START)
-        helper.attachToRecyclerView(binding.recyclerView)
+        binding.recyclerView.adapter = productCategoryAdapter
+        productCategoryAdapter.submitList(generateBestData())
+        binding.recyclerView.layoutManager = GridLayoutManager(context, 2)
     }
 
-    private fun generateBestData(): List<HomeModel>? {
+    private fun  navigateToProductDetails() {
+        val destination = CatalogNewFragmentDirections.actionNewCatalogFragmentToProductNextDetailsFragment()
+        findNavController().navigate(destination)
+    }
+
+    private fun generateBestData(): ArrayList<HomeModel> {
         val list = arrayListOf<HomeModel>()
 
         list.add(
                 HomeModel(
-                        image = R.drawable.grey, title = "vfdv"
+                        image = R.drawable.hoody, title = "Hoody"
                 )
         )
         list.add(
                 HomeModel(
-                        image = R.drawable.t_thirds, title = "fvd"
+                        image = R.drawable.sweaters, title = "Sweaters"
                 )
         )
         list.add(
                 HomeModel(
-                        image = R.drawable.top, title = "ebdf"
+                        image = R.drawable.chords, title = "Shords"
                 )
         )
         list.add(
                 HomeModel(
-                        image = R.drawable.top_jins, title = "beb"
+                        image = R.drawable.t_thirsdd, title = "T-thirds"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.tops, title = "Top"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.shords_l, title = "Shords"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.shords_p, title = "Shords"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.shords_r, title = "Shords"
+                )
+        )
+        list.add(
+                HomeModel(
+                        image = R.drawable.skirts, title = "Skirts"
                 )
         )
 
+//        list.add(
+//                HomeModel(
+//                        image = R.drawable.grey, title = "defsd"
+//                )
+//        )
+//        list.add(
+//                HomeModel(
+//                        image = R.drawable.grey, title = "dfvsd"
+//                )
+//        )
+//        list.add(
+//                HomeModel(
+//                        image = R.drawable.t_thirds, title = "vfsfv"
+//                )
+//        )
+//        list.add(
+//                HomeModel(
+//                        image = R.drawable.grey, title = "defsd"
+//                )
+//        )
+//        list.add(
+//                HomeModel(
+//                        image = R.drawable.grey, title = "dfvsd"
+//                )
+//        )
         return list
     }
 }

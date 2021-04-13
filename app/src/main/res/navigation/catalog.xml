@@ -9,6 +9,10 @@
         android:name="com.example.adele.ui.bottom_nav.catalog.CatalogFragment"
         android:label="CatalogFragment" >
         <action
+            android:id="@+id/action_next_card_fragment_to_description"
+            app:destination="@+id/nextCatalogFragment"
+            />
+        <action
             android:id="@+id/catalog"
             app:destination="@+id/productCategoryFragment"/>
         <action
@@ -24,19 +28,28 @@
             app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
+        android:id="@+id/nextCatalogFragment"
+        android:name="com.example.adele.ui.bottom_nav.catalog.NextCatalogFragment"
+        android:label="NextCatalogFragment"
+        tools:layout="@layout/fragment_next_catalog">
+
+    </fragment>
+    <fragment
         android:id="@+id/productNextDetailsFragment"
         android:name="com.example.adele.ui.bottom_nav.home.NextProductDetailsFragment"
         android:label="ProductDetailsFragment"
         >
+
         <action
-        android:id="@+id/action_product_fragment_to_description"
-       />
+            android:id="@+id/action_product_fragment_to_description"
+
+            />
         <action
             android:id="@+id/action_product_fragment_to_product_details_fragment"
             />
 
         <action
             android:id="@+id/action_product_details_fragment_to_sp_fragment"
-             />
+            />
     </fragment>
 </navigation>

@@ -23,9 +23,6 @@ class ProductDetailsFragment : BaseFragment() {
             navigateToRelatedProductDetails()
         }
     }
-
-
-
     private fun setupViewPager() {
         binding.img.adapter = slideAdapter
         slideAdapter.update(getDataForPhotoPager())

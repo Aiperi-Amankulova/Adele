@@ -15,7 +15,7 @@ class ProductFragment : BaseFragment() {
     private val binding by viewBinding(FragmentCategoriesSeeBinding::bind)
 
     private val productCategoryAdapter by lazy {
-         ProductAdapter() {
+        DetailsAdapter() {
             navigateToProductDetails()
         }
     }

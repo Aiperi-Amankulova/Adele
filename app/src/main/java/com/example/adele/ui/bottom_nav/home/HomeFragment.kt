@@ -60,11 +60,13 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupRecyclerView() {
-        binding.recyclerView.adapter = newProductAdapter
+        binding.recyclerViewCard.adapter = newProductAdapter
         binding.recycler.adapter = destinationAdapter
         binding.recycler.layoutManager = GridLayoutManager(context, 3)
+
         val helper: SnapHelper = GravitySnapHelper(Gravity.START)
-        helper.attachToRecyclerView(binding.recyclerView)
+        helper.attachToRecyclerView(binding.recyclerViewCard)
+
     }
     private fun navigateToProductCategory() {
         val destination = FragmentDirections.actionMainFragmentToProductCategoryFragment()
