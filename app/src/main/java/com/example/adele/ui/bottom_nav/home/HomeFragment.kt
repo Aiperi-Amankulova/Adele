@@ -12,6 +12,7 @@ import com.example.adele.data.common.BaseFragment
 import com.example.adele.databinding.FragmentHomeBinding
 import com.example.adele.utils.GravitySnapHelper
 import com.example.adele.utils.extensions.viewBinding
+import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class HomeFragment : BaseFragment() {
@@ -20,7 +21,7 @@ class HomeFragment : BaseFragment() {
     private val vm by sharedViewModel<HomeViewModel>()
     private val binding by viewBinding(FragmentHomeBinding::bind)
 
-    private val newProductAdapter by lazy {
+    private val  newProductAdapter by lazy {
         ProductAdapter() {
             navigateToProductDetails()
         }
@@ -45,6 +46,7 @@ class HomeFragment : BaseFragment() {
         setupRecyclerView()
         setupViewModel()
         setupListeners()
+        tv_scroll.isSelected = true
     }
 
     private fun setupViewModel() {
@@ -64,14 +66,13 @@ class HomeFragment : BaseFragment() {
         val helper: SnapHelper = GravitySnapHelper(Gravity.START)
         helper.attachToRecyclerView(binding.recyclerView)
     }
-
     private fun navigateToProductCategory() {
-        val destination =  FragmentDirections.actionMainFragmentToProductCategoryFragment()
+        val destination = FragmentDirections.actionMainFragmentToProductCategoryFragment()
         findNavController().navigate(destination)
     }
 
     private fun navigateToProductDetails() {
-        val destination =  FragmentDirections.actionMainFragmentToProductDetailsFragment()
+        val destination = FragmentDirections.actionMainFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
     }
 }

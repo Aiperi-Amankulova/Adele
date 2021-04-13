@@ -1,4 +1,4 @@
-package com.example.adele.ui
+package com.example.adele.ui.bottom_nav
 
 import android.view.LayoutInflater
 import android.view.View

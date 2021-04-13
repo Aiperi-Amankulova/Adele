@@ -15,7 +15,6 @@ class BasketFragment : BaseFragment() {
     private val binding by viewBinding(FragmentBasketBinding::bind)
     private val favoriteAdapter by lazy {
         BasketAdapter() {
-
         }
     }
 

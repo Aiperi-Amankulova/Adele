@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/catalog"
     app:startDestination="@id/catalogFragment">
     <fragment
@@ -10,6 +11,9 @@
         <action
             android:id="@+id/catalog"
             app:destination="@+id/productCategoryFragment"/>
+        <action
+            android:id="@+id/action_catalogFragment_to_productNextDetailsFragment"
+            app:destination="@id/productNextDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/productCategoryFragment"
@@ -20,9 +24,10 @@
             app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/productDetailsFragment"
-        android:name="com.example.adele.ui.bottom_nav.home.ProductDetailsFragment"
-        android:label="ProductDetailsFragment" >
+        android:id="@+id/productNextDetailsFragment"
+        android:name="com.example.adele.ui.bottom_nav.home.NextProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        >
         <action
         android:id="@+id/action_product_fragment_to_description"
        />

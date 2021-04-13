@@ -1,5 +1,6 @@
 package com.example.adele.ui.on_boarding
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.adele.PreferenceHelper
 import com.example.adele.R
 import com.example.adele.data.model.OnBoardModel
+import com.example.adele.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_on_boarding.*
 
 class OnBoardingMainFragment : Fragment(R.layout.activity_on_boarding) {
@@ -43,8 +45,9 @@ class OnBoardingMainFragment : Fragment(R.layout.activity_on_boarding) {
 
         tvNext.setOnClickListener {
             if (isLastPage(onBoardViewPager.currentItem)) {
-                PreferenceHelper.setIsFirstLaunch()
-                findNavController().navigate(R.id.splashScreenForOnBoard)
+             val intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
             }
             else {
                 onBoardViewPager.currentItem += 1

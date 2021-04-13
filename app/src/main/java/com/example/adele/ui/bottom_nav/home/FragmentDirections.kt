@@ -11,5 +11,5 @@ class FragmentDirections private constructor() {
 
         fun actionMainFragmentToProductCategoryFragment(): NavDirections =
                 ActionOnlyNavDirections(R.id.action_mainFragment_to_productCategoryFragment)
-    }}
-
+    }
+}

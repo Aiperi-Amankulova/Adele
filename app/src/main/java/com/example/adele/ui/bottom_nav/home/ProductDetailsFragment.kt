@@ -8,7 +8,8 @@ import com.example.adele.data.common.BaseFragment
 import com.example.adele.data.model.HomeModel
 import com.example.adele.data.model.SpModel
 import com.example.adele.databinding.FragmentMoreBinding
-import com.example.adele.ui.PhotoAdapter
+import com.example.adele.ui.MultipleAdapter
+import com.example.adele.ui.bottom_nav.PhotoAdapter
 import com.example.adele.utils.extensions.viewBinding
 
 class ProductDetailsFragment : BaseFragment() {
@@ -16,10 +17,21 @@ class ProductDetailsFragment : BaseFragment() {
     private val binding by viewBinding(FragmentMoreBinding::bind)
 
     private val slideAdapter by lazy { PhotoAdapter() }
+    private val spAdapter by lazy { MultipleAdapter() }
     private val relatedProductAdapter by lazy {
-        DetailsAdapter() {
+        DiscountsAdapter() {
             navigateToRelatedProductDetails()
         }
+    }
+
+
+
+    private fun setupViewPager() {
+        binding.img.adapter = slideAdapter
+        slideAdapter.update(getDataForPhotoPager())
+
+        binding.recyclerPro.adapter = spAdapter
+        spAdapter.update(generateSpecData())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,7 +56,7 @@ class ProductDetailsFragment : BaseFragment() {
 
     private fun navigateToRelatedProductDetails() {
         val destination =
-                ProductDetailsFragmentDirections.actionProductDetailsFragmentToSpFragment()
+                ProductFragmentDirections.actionProductCategoryFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
     }
 
@@ -61,11 +73,11 @@ class ProductDetailsFragment : BaseFragment() {
         val list = arrayListOf<SpModel>()
         var newList = listOf<SpModel>()
 
-        list.add(SpModel.generateMemory())
-        list.add(SpModel.generateDisplay())
-        list.add(SpModel.generateCamera())
-        list.add(SpModel.generateOS())
-        list.add(SpModel.generateBatteries())
+        list.add(SpModel.generateSize())
+        list.add(SpModel.generateColor())
+        list.add(SpModel.generateFrom())
+
+
 
         newList = if (list.size >= 3) {
             list.subList(0, 3)
